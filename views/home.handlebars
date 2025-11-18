@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Tienda - Backend I</h1>
+    
+    <h2>Lista de Productos: {{title}}</h2>
+    
+    <ul class="product-list">
+        {{#each products}}
+            <li class="product-item">
+                <p><strong>ID:</strong> {{this.id}}</p>
+                <p><strong>Nombre:</strong> {{this.name}}</p>
+                <p><strong>Precio:</strong> ${{this.price}}</p>
+                <hr>
+            </li>
+        {{/each}}
+    </ul>
+
+    <p>
+        Esta es la vista **estática** (home.handlebars). <br>
+        <a href="/realtimeproducts">Ir a la vista de Productos en **Tiempo Real** (WebSockets)</a>
+    </p>
+</div>

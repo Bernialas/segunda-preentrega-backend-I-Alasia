@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>{{title}}</h1>
+    <p>Esta es la vista que se actualiza automáticamente con WebSockets.</p>
+    
+    ---
+
+    <h2>➕ Agregar Producto (Vía Socket)</h2>
+    <form id="addProductForm">
+        <label for="productName">Nombre:</label>
+        <input type="text" id="productName" placeholder="Nombre del Producto" required>
+        
+        <label for="productPrice">Precio:</label>
+        <input type="number" id="productPrice" placeholder="Precio" required>
+        
+        <button type="submit">Crear Producto</button>
+    </form>
+    
+    ---
+
+    <h2>➖ Eliminar Producto por ID (Vía Socket)</h2>
+    <form id="deleteProductForm">
+        <label for="productIdToDelete">ID del Producto:</label>
+        <input type="number" id="productIdToDelete" placeholder="Ingrese ID a eliminar" required>
+        
+        <button type="submit">Eliminar Producto</button>
+    </form>
+
+    ---
+
+    <h2>🛒 Lista de Productos en Tiempo Real</h2>
+    <ul id="productList">
+        <li>Conectando al servidor de WebSockets...</li>
+    </ul>
+
+    <p><a href="/">Volver a la vista estática</a></p>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realTime.js"></script>
